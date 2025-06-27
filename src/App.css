@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+  align-items: center;
+  width: 100%;}
+:root {
+  --header-bg: #85c1e9;
+  --header-text: #fff;
+}
+
+[data-theme='dark'] {
+  --header-bg: #23234a;
+  --header-text: #f0f0f0;
+}
+
+header {
+  background: var(--header-bg);
+  padding: 0.5rem;
+  color: var(--header-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+
+header h1{
+  font-size: 2rem;
+}
+
+button {
+  padding: 0.8rem 1.2rem;
+  border: none;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
