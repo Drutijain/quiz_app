@@ -19,6 +19,9 @@ const domains = [
 
 function DomainSelection({ setDomain }) {
   return (
+    <div className="cards">
+
+
     <div className="card-container">
       {domains.map((domain) => (
         <div className="card" key={domain.name} onClick={() => setDomain(domain.name)}>
@@ -26,6 +29,7 @@ function DomainSelection({ setDomain }) {
           <h3>{domain.name}</h3>
         </div>
       ))}
+    </div>
     </div>
   );
 }
