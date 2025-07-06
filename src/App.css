@@ -7,6 +7,19 @@
   --header-text: #fff;
 }
 
+body, html, #root, .App {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  /* background: linear-gradient(to right, #4e54c8, #8f94fb); or your background */
+  background-size: cover;
+  background-position: center;
+}
+
+
 [data-theme='dark'] {
   --header-bg: #23234a;
   --header-text: #f0f0f0;
