@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#131B34" />
+  </head>
+  <body>
+    <noscript></noscript>
+    <div id="root"></div>
+
+    <script>
+      (function (i) {
+            window['MoitribeGameService'] = i; window[i] = window[i] || function () {
+                (window[i].q = window[i].q || []).push(arguments)
+            };
+            a = document.createElement('script'), m = document.getElementsByTagName('script')[0];
+            a.src = 'http://api1.moitribe.com/sdk/js/sdk-stable_1.js'; m.parentNode.insertBefore(a, m);
+	      a = document.createElement('script');
+a.src = 'http://api1.moitribe.com/modules/jslib/paho-mqtt.js';
+        m.parentNode.insertBefore(a, m);
+		a = document.createElement('script');
+a.src = 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js';
+        m.parentNode.insertBefore(a, m);
+		a = document.createElement('script');
+a.src = 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js';
+        m.parentNode.insertBefore(a, m);
+		a = document.createElement('link');
+a.src = 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css';
+        m.parentNode.insertBefore(a, m);
+
+})('moitribeGS');
+
+    </script>
+
+  </body>
+</html>

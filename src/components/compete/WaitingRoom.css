@@ -1,0 +1,18 @@
+.room-code-container h3 {
+  color: var(--modal-text);
+  font-family: var(--font-headings);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.waiting-modal-content h3 {
+  color: var(--modal-text);
+}
+
+.waiting-message h3 {
+  color: var(--modal-text);
+  font-size: 1rem;
+  font-weight: 500;
+}

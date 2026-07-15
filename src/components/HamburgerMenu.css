@@ -1,0 +1,97 @@
+.hamburger-menu-container {
+  position: relative;
+  display: inline-block;
+  margin-left: 16px;
+}
+
+.hamburger-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  gap: 5px;
+}
+
+.hamburger-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+  filter: none;
+}
+
+.hamburger-btn .bar {
+  width: 20px;
+  height: 2px;
+  background: var(--header-text);
+  border-radius: 2px;
+  transition: 0.25s ease;
+}
+
+.hamburger-btn.open .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger-btn.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-btn.open .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.dropdown-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: transparent;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 52px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  min-width: 190px;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  gap: 2px;
+  animation: dropdown-in 0.15s ease;
+}
+
+@keyframes dropdown-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-menu button {
+  background: none;
+  border: none;
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dropdown-menu button svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.dropdown-menu button:hover {
+  background: var(--bg-color-alt);
+  filter: none;
+}

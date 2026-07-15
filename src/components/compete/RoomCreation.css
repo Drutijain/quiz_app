@@ -1,0 +1,36 @@
+.room-modal-content h2 {
+  margin: 0 0 1.5rem;
+  text-align: center;
+  color: var(--modal-text);
+  font-size: 1.4rem;
+}
+
+.room-buttons button {
+  background: var(--accent);
+  color: var(--ink);
+  padding: 0.85rem 1.6rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(245, 166, 35, 0.3);
+  transition: all 0.2s ease;
+}
+
+.room-buttons button:last-child {
+  background: transparent;
+  color: var(--modal-text);
+  border: 1.5px solid var(--border-color);
+  box-shadow: none;
+}
+
+.room-buttons button:hover {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+}
+
+.room-buttons button:last-child:hover {
+  background: var(--bg-color-alt);
+  filter: none;
+}

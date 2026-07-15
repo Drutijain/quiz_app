@@ -1,0 +1,106 @@
+.leaderboard-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--modal-overlay);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  backdrop-filter: blur(3px);
+}
+
+.leaderboard-content {
+  background: var(--leaderboard-bg);
+  color: var(--leaderboard-text);
+  padding: clamp(1.5rem, 4vw, 2rem) clamp(1rem, 3vw, 1.5rem);
+  border-radius: var(--radius-lg);
+  width: clamp(300px, 90vw, 640px);
+  max-height: clamp(400px, 80vh, 700px);
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  position: relative;
+}
+
+.leaderboard-content h2 {
+  color: var(--leaderboard-text);
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+  margin: 0 0 clamp(1rem, 2vw, 1.5rem);
+  padding-right: 3rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--leaderboard-btn-bg);
+  color: var(--leaderboard-btn-text);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: clamp(0.5rem, 2vw, 1rem);
+}
+
+.leaderboard-table th, .leaderboard-table td {
+  padding: clamp(0.6rem, 1.2vw, 0.85rem) clamp(0.8rem, 1.5vw, 1rem);
+  border-bottom: 1px solid var(--leaderboard-table-border);
+  color: var(--leaderboard-text);
+  text-align: left;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+}
+
+.leaderboard-table th {
+  background: var(--leaderboard-table-header);
+  font-family: var(--font-headings);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.leaderboard-table th:first-child,
+.leaderboard-table td:first-child {
+  width: 64px;
+}
+
+.rank-cell {
+  font-size: 1.1rem;
+}
+
+.leaderboard-table tr:nth-child(even) {
+  background: var(--leaderboard-row-alt);
+}
+
+.leaderboard-table tr.rank-1 { background: rgba(245, 166, 35, 0.14); }
+.leaderboard-table tr.rank-2 { background: rgba(148, 163, 184, 0.14); }
+.leaderboard-table tr.rank-3 { background: rgba(180, 116, 62, 0.14); }
+
+.leaderboard-loading, .leaderboard-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 0;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+:root {
+  --leaderboard-bg: var(--card-bg);
+  --leaderboard-text: var(--text-color);
+  --leaderboard-btn-bg: var(--bg-color-alt);
+  --leaderboard-btn-text: var(--text-color);
+  --leaderboard-table-border: var(--border-color);
+  --leaderboard-table-header: var(--bg-color-alt);
+  --leaderboard-row-alt: var(--bg-color);
+}

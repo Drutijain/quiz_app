@@ -1,0 +1,133 @@
+.result-container {
+  max-width: 480px;
+  margin: 2.5rem auto;
+  padding: clamp(1.75rem, 4vw, 2.5rem);
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  color: var(--text-color);
+  box-shadow: var(--shadow-md);
+}
+
+.result-eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-strong);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.result-container h2 {
+  font-size: 1.8rem;
+  margin: 0 0 1.5rem 0;
+  color: var(--text-color);
+}
+
+.score-section {
+  margin: 1.5rem 0;
+  padding: 1.25rem 1rem;
+  background-color: var(--bg-color-alt);
+  border-radius: var(--radius-md);
+  color: var(--text-color);
+}
+
+.score-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.score-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  min-width: 80px;
+}
+
+.score-block-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  max-width: 110px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.score-block-value {
+  font-size: 1.9rem;
+  color: var(--text-color);
+}
+
+.score-block-total {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.score-vs {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.rating-change {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 1.25rem 0;
+  font-size: 0.95rem;
+  flex-wrap: wrap;
+}
+
+.rating-up {
+  color: var(--success);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-weight: 700;
+}
+
+.rating-down {
+  color: var(--danger);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-weight: 700;
+}
+
+.rating-final {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.restart-btn {
+  margin-top: 1.5rem;
+  padding: 0.85rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: var(--accent);
+  color: var(--ink);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: filter 0.2s;
+  box-shadow: 0 4px 14px rgba(245, 166, 35, 0.35);
+}
+
+.restart-btn:hover {
+  filter: brightness(1.06);
+}
+
+.time-taken {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin: 0.75rem 0 0 0;
+}

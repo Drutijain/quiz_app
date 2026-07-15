@@ -1,0 +1,261 @@
+.App {
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg-color);
+}
+
+:root {
+  /* Base theme colors (mirrored from index.css for components still referencing these) */
+  --bg-primary: var(--bg-color);
+  --text-primary: var(--text-color);
+  --bg-secondary: var(--bg-color-alt);
+  --text-secondary: var(--text-muted);
+
+  /* Interactive elements */
+  --button-bg: var(--card-bg);
+  --button-text: var(--text-color);
+  --button-hover: var(--bg-color-alt);
+  --button-shadow: var(--shadow-sm);
+
+  /* Modal colors */
+  --modal-overlay: rgba(13, 18, 32, 0.55);
+  --modal-bg: var(--card-bg);
+  --modal-text: var(--text-color);
+
+  /* Table colors */
+  --table-header: var(--bg-color-alt);
+  --table-row-alt: var(--bg-color);
+  --table-border: var(--border-color);
+
+  /* Component specific */
+  --header-bg: var(--ink);
+  --header-text: #F6F7FB;
+  --profile-bg: var(--modal-bg);
+  --profile-text: var(--modal-text);
+  --profile-card-bg: var(--bg-secondary);
+}
+
+[data-theme='dark'] {
+  --bg-primary: var(--bg-color);
+  --text-primary: var(--text-color);
+  --bg-secondary: var(--bg-color-alt);
+  --text-secondary: var(--text-muted);
+
+  --button-bg: var(--card-bg);
+  --button-text: var(--text-color);
+  --button-hover: var(--bg-color-alt);
+  --button-shadow: var(--shadow-sm);
+
+  --modal-overlay: rgba(0, 0, 0, 0.65);
+  --modal-bg: var(--card-bg);
+  --modal-text: var(--text-color);
+
+  --table-header: var(--bg-color-alt);
+  --table-row-alt: var(--bg-color);
+  --table-border: var(--border-color);
+
+  --header-bg: var(--ink);
+  --header-text: #F6F7FB;
+  --profile-bg: var(--modal-bg);
+  --profile-text: var(--modal-text);
+  --profile-card-bg: var(--bg-secondary);
+}
+
+.App h2 {
+  color: var(--text-primary);
+}
+
+p {
+  margin: 2rem;
+}
+
+.wait {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  color: var(--text-primary);
+  font-family: var(--font-headings);
+}
+
+header {
+  background: var(--header-bg);
+  color: var(--header-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 900;
+}
+
+/* ===== Shared modal chrome (room / waiting) ===== */
+.room-modal, .waiting-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--modal-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(3px);
+  padding: 1rem;
+}
+
+.room-modal-content, .waiting-modal-content {
+  background: var(--modal-bg);
+  color: var(--modal-text);
+  padding: clamp(1.5rem, 4vw, 2.25rem);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  min-width: 300px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+.room-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.room-id-display {
+  background: var(--header-bg);
+  color: var(--header-text);
+  padding: 8px 16px;
+  margin: 8px auto;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+  font-family: var(--font-mono);
+}
+
+.waiting-modal-content h3 {
+  margin: 0 0 16px 0;
+}
+
+.room-code-container {
+  background: rgba(245, 166, 35, 0.08);
+  padding: 16px;
+  border-radius: var(--radius-md);
+  margin: 16px 0;
+}
+
+.room-code-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--ink);
+  padding: 14px 20px;
+  border-radius: var(--radius-sm);
+  margin: 8px 0;
+}
+
+.room-code-box strong {
+  font-family: var(--font-mono);
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: var(--accent);
+}
+
+.copy-button {
+  background: transparent;
+  border: none;
+  color: inherit;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.copy-button:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.share-text {
+  font-size: 0.85em;
+  opacity: 0.7;
+  margin: 8px 0 0 0;
+}
+
+.waiting-message {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.player-joined {
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px;
+  background: rgba(33, 161, 121, 0.1);
+  border-radius: var(--radius-md);
+}
+
+.player-joined h3 {
+  color: var(--success);
+  margin-bottom: 16px;
+}
+
+.start-quiz-btn {
+  background: var(--success);
+  color: white;
+  padding: 12px 32px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 1.05em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 20px;
+  box-shadow: 0 4px 14px rgba(33, 161, 121, 0.35);
+}
+
+.start-quiz-btn:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  margin: 20px auto 0;
+  border: 4px solid var(--border-color);
+  border-left-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== Base button ===== */
+button {
+  padding: 0.75rem 1.2rem;
+  border: none;
+  background: var(--ink);
+  color: #F6F7FB;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-secondary);
+  transition: transform 0.15s ease, filter 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:hover {
+  filter: brightness(1.15);
+}
+
+button:active {
+  transform: translateY(1px);
+}
